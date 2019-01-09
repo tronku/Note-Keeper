@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="invisible"
+        android:id="@+id/noteRecyclerView"
+        tools:listitem="@layout/single_note_layout"
+        android:layout_marginTop="3dp"
+        android:layout_marginBottom="6dp"/>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_gravity="bottom|end"
+        app:fabCustomSize="50dp"
+        android:src="@drawable/ic_add"
+        android:layout_margin="16dp"
+        android:id="@+id/addNote"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="No notes found!"
+        android:textSize="20sp"
+        android:id="@+id/no_notes_found"/>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
